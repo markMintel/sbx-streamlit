@@ -10,6 +10,7 @@ st.caption("this is the caption")
 st.code("x=2021")
 st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
+# Sidebar
 st.sidebar.title("This is my sidebar")
 st.sidebar.button("You can click this, but it does not do anything")
 st.sidebar.radio("Is this useful?", ["Yes it is", "Maybe, I don't quite know yet"])
@@ -47,3 +48,9 @@ st.error("Error")
 st.warning("Warning")
 st.info("It's easy to build a streamlit app")
 st.exception(RuntimeError("RuntimeError exception"))
+
+# Containers
+container = st.container()
+container.write("Here is some text in my container")
+
+st.write("This text is not inside the container")
