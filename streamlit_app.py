@@ -12,7 +12,7 @@ st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
 st.sidebar.title("This is my sidebar")
 st.sidebar.button("You can click this, but it does not do anything")
-st.sidebar.radio("Is this useful?", ["Yes it is", "Maybe, I don't quite know yet"]
+st.sidebar.radio("Is this useful?", ["Yes it is", "Maybe, I don't quite know yet"])
 
 # Images
 show_image = st.checkbox("Show Image")
