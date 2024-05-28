@@ -1,5 +1,8 @@
 import streamlit as st
 import time
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 # Titles and text
 st.title ("this is the app title")
@@ -54,3 +57,9 @@ container = st.container()
 container.write("Here is some text in my container")
 
 st.write("This text is not inside the container")
+
+# Displaying graphs
+rand=np.random.normal(1, 2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15)
+st.pyplot(fig)
