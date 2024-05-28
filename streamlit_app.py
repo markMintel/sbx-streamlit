@@ -29,8 +29,8 @@ st.text_area('Description')
 st.file_uploader('Upload a photo')
 st.color_picker('Choose your favorite color')
 
+#st.progress(i*10)
+
 with st.spinner('Wait for it...'):    
-  for i in range(1,11):
-    time.sleep(1)
-    st.progress(i*10)
+  time.sleep(5)
 st.balloons()
