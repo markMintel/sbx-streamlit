@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 
+# Titles and text
 st.title ("this is the app title")
 st.header("this is the markdown")
 st.markdown("this is the header")
@@ -9,11 +10,12 @@ st.caption("this is the caption")
 st.code("x=2021")
 st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
+# Images
 show_image = st.checkbox("Show Image")
 if show_image:
   st.image("streamlit_tp.png")
 
-
+# User input tools
 st.button('Click')
 st.radio('Pick your gender',['Male','Female'])
 st.selectbox('Pick your gender',['Male','Female'])
@@ -34,3 +36,10 @@ st.color_picker('Choose your favorite color')
 with st.spinner('Wait for it...'):    
   time.sleep(5)
 st.balloons()
+
+# Messages
+st.success("You did it !")
+st.error("Error")
+st.warnig("Warning")
+st.info("It's easy to build a streamlit app")
+st.exception(RuntimeError("RuntimeError exception"))
