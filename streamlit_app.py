@@ -15,7 +15,7 @@ if sidebar_option == 'Some way to work with files':
   if uploaded_file is not None:
     try:
         df = pd.read_csv(uploaded_file, header=0)
-        df = df.set_index('Name')
+        df = df.set_index('NAME')
 
         # Create a pick list to pick which friuts they want
         states_selected = st.multiselect('Select States:', list(df.index),['New Jersey','New York'])
