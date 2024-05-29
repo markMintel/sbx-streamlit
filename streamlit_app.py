@@ -31,6 +31,12 @@ st.multiselect('choose a planet',['Jupiter', 'Mars', 'neptune'])
 my_mark = st.select_slider('Pick a mark', ['Bad', 'Good', 'Excellent'])
 my_number = st.slider('Pick a number', 0,50)
 
+#st.progress(i*10)
+if my_mark == 'Excellent' and my_number == 1:
+  with st.spinner('Wait for it...'):    
+    time.sleep(5)
+  st.balloons()
+
 st.number_input('Pick a number', 0,10)
 st.text_input('Email address')
 st.date_input('Travelling date')
@@ -38,12 +44,6 @@ st.time_input('School time')
 st.text_area('Description')
 st.file_uploader('Upload a photo')
 st.color_picker('Choose your favorite color')
-
-#st.progress(i*10)
-if my_mark == 'Excellent' and my_number == 1:
-  with st.spinner('Wait for it...'):    
-    time.sleep(5)
-  st.balloons()
 
 # Messages
 st.success("You did it !")
