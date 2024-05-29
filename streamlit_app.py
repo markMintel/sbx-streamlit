@@ -66,3 +66,28 @@ st.pyplot(fig)
 
 with st.popover("Settings"):
   st.checkbox("I'm done here")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+  with st.popover("Settings"):
+    gc1 = st.checkbox("Good Choice")
+    bc1 = st.checkbox("Bad Choice")
+
+with col2:
+  with st.popover("Settings"):
+    gc2 = st.checkbox("Good Choice")
+    bc2 = st.checkbox("Bad Choice")
+
+with col3:
+  with st.popover("Settings"):
+    gc3 = st.checkbox("Good Choice")
+    bc3 = st.checkbox("Bad Choice")
+
+if gc1 and gc2 and gc3:
+  st.balloons()
+
+if bc1 and bc2 and bc3:
+  st.error("3 bad choices? Please reconsider")
+
+
