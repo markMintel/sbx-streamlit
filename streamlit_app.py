@@ -23,6 +23,9 @@ if sidebar_option == 'Some way to work with files':
 
         # Display the table on the page
         st.dataframe(states_to_show)
+
+        st.subheader("Edit-able dataframe")
+        st.experimental_data_editor(states_to_show)
     except:
       st.error("The file did not match the expected input")
 
