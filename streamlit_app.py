@@ -28,8 +28,8 @@ st.button('Click')
 st.radio('Pick your gender',['Male','Female'])
 st.selectbox('Pick your gender',['Male','Female'])
 st.multiselect('choose a planet',['Jupiter', 'Mars', 'neptune'])
-st.select_slider('Pick a mark', ['Bad', 'Good', 'Excellent'])
-st.slider('Pick a number', 0,50)
+my_mark = st.select_slider('Pick a mark', ['Bad', 'Good', 'Excellent'])
+my_number = st.slider('Pick a number', 0,50)
 
 st.number_input('Pick a number', 0,10)
 st.text_input('Email address')
@@ -40,10 +40,10 @@ st.file_uploader('Upload a photo')
 st.color_picker('Choose your favorite color')
 
 #st.progress(i*10)
-
-with st.spinner('Wait for it...'):    
-  time.sleep(5)
-st.balloons()
+if my_mark == 'Excellent' and my_number == 1:
+  with st.spinner('Wait for it...'):    
+    time.sleep(5)
+  st.balloons()
 
 # Messages
 st.success("You did it !")
