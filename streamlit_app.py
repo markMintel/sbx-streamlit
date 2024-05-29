@@ -2,7 +2,7 @@ import streamlit as st
 import time
 import matplotlib.pyplot as plt
 import numpy as np
-
+import pandas as pd
 
 # Sidebar
 st.sidebar.title("This is my sidebar")
@@ -10,7 +10,22 @@ st.sidebar.button("You can click this, but it does not do anything")
 sidebar_option = st.sidebar.radio("What do you want to see?", ["All of the streamlit toys", "Some way to work with files"])
 
 if sidebar_option == 'Some way to work with files':
-  st.file_uploader('Upload a photo')
+  uploaded_file = st.file_uploader('Upload a CSV file to explore', type='csv')
+
+  if uploaded_file is not None:
+    try:
+        df = pd.read_csv(uploaded_file, header=0)
+        df = df.set_index('Name')
+
+        # Create a pick list to pick which friuts they want
+        states_selected = st.multiselect('Select States:', list(df.index),['New Jersey','New York'])
+        states_to_show = df.loc[states_selected]
+
+        # Display the table on the page
+        st.dataframe(states_to_show)
+    except:
+      st.error("The file did not match the expected input")
+
 else:
   # Titles and text
   st.title ("this is the app title")
