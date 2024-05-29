@@ -64,23 +64,21 @@ fig, ax = plt.subplots()
 ax.hist(rand, bins=15)
 st.pyplot(fig)
 
-with st.popover("Settings"):
-  st.checkbox("I'm done here")
 
 col1, col2, col3 = st.columns(3)
-
+st.subheader("Make 3 good choices for a surprise!")
 with col1:
-  with st.popover("Settings"):
+  with st.popover("Choice 1"):
     gc1 = st.checkbox("Good Choice 1")
     bc1 = st.checkbox("Bad Choice 1")
 
 with col2:
-  with st.popover("Settings"):
+  with st.popover("Choice 2"):
     gc2 = st.checkbox("Good Choice 2")
     bc2 = st.checkbox("Bad Choice 2")
 
 with col3:
-  with st.popover("Settings"):
+  with st.popover("Choice"):
     gc3 = st.checkbox("Good Choice 3")
     bc3 = st.checkbox("Bad Choice 3")
 
