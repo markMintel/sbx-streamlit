@@ -85,9 +85,9 @@ else:
   ax.hist(rand, bins=15)
   st.pyplot(fig)
   
-  
-  col1, col2, col3 = st.columns(3)
   st.subheader("Make 3 good choices for a surprise!")
+  col1, col2, col3 = st.columns(3)
+  
   with col1:
     with st.popover("Choice 1"):
       gc1 = st.checkbox("Good Choice 1")
