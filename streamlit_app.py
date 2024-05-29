@@ -71,18 +71,18 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
   with st.popover("Settings"):
-    gc1 = st.checkbox("Good Choice")
-    bc1 = st.checkbox("Bad Choice")
+    gc1 = st.checkbox("Good Choice 1")
+    bc1 = st.checkbox("Bad Choice 1")
 
 with col2:
   with st.popover("Settings"):
-    gc2 = st.checkbox("Good Choice")
-    bc2 = st.checkbox("Bad Choice")
+    gc2 = st.checkbox("Good Choice 2")
+    bc2 = st.checkbox("Bad Choice 2")
 
 with col3:
   with st.popover("Settings"):
-    gc3 = st.checkbox("Good Choice")
-    bc3 = st.checkbox("Bad Choice")
+    gc3 = st.checkbox("Good Choice 3")
+    bc3 = st.checkbox("Bad Choice 3")
 
 if gc1 and gc2 and gc3:
   st.balloons()
