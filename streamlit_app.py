@@ -22,7 +22,7 @@ if sidebar_option == 'Some way to work with files':
         sources_to_show = df.loc[sources_selected]
 
         # Display the table on the page
-        ## st.dataframe(sources_to_show)
+        st.dataframe(sources_to_show)
 
         st.subheader("Find the Files You Would Like to Fix")
         st.experimental_data_editor(sources_to_show, num_rows="dynamic")
