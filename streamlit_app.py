@@ -33,6 +33,7 @@ if sidebar_option == 'Some way to work with files':
           try:
             df = pd.read_csv(uploaded_file2, header=0)
             st.experimental_data_editor(df, num_rows="dynamic")
+            st.button('Save File')
           except:
             st.error("There was an issue with the file")
     except:
