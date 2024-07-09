@@ -3,6 +3,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import glob
 
 # Sidebar
 st.sidebar.title("This is my sidebar")
@@ -25,6 +26,8 @@ if sidebar_option == 'Some way to work with files':
         st.dataframe(sources_to_show)
 
         st.subheader("Find the Files You Would Like to Fix")
+        files = glob.glob('*.csv')
+        st.selectbox('Pick your file',files)
         st.experimental_data_editor(sources_to_show, num_rows="dynamic")
     except:
       st.error("The file did not match the expected input")
