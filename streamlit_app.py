@@ -12,6 +12,7 @@ sidebar_option = st.sidebar.radio("What do you want to see?", ["All of the strea
 
 if sidebar_option == 'Some way to work with files':
   uploaded_file = st.file_uploader('Upload a CSV file to explore', type='csv')
+  uploaded_file2 = st. file_uploader('Example of rejected file', type='csv')
 
   if uploaded_file is not None:
     try:
@@ -26,9 +27,14 @@ if sidebar_option == 'Some way to work with files':
         st.dataframe(sources_to_show)
 
         st.subheader("Find the Files You Would Like to Fix")
-        files = glob.glob('*.csv')
-        st.selectbox('Pick your file',files)
-        st.experimental_data_editor(sources_to_show, num_rows="dynamic")
+        #files = glob.glob('*.csv') 
+        st.selectbox('Choose your file',['daily_processed_20230212_USER_fetchrewards_user_20230212_0003.csv'])
+        if uploaded_file2 is not None:
+          try:
+            df = pd.read_csv(uploaded_file2, header=0)
+            st.experimental_data_editor(df, num_rows="dynamic")
+          except:
+            st.error("There was an issue with the file")
     except:
       st.error("The file did not match the expected input")
 
