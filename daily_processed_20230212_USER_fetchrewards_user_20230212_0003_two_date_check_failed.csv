@@ -1,0 +1,2 @@
+,id,first_name,last_name,email,gender,birth_date,create_date,last_fetch_rewards_login,active,user_type,modify_date,auth_facebook,auth_google,referral_code,state,deactivated_reason,elt_ts,elt_by
+323901,6192cee67c22c7641cbc288c,Kris,Malone,kjlmalone@aol.com,female,2022-03-05 05:00:00,2021-11-15 21:19:34,2023-02-11 14:08:21,1,consumer,2023-02-11 14:08:21,0,0,,OH,,2023-02-15 09:24:20.898337,dgtl_fetch_analytincs_gcs_to_sf_na_daily__gcs_to_sf_raw__manual__2023-02-15T06:07:29.771074+00:00
