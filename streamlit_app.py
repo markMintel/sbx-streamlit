@@ -15,17 +15,17 @@ if sidebar_option == 'Some way to work with files':
   if uploaded_file is not None:
     try:
         df = pd.read_csv(uploaded_file, header=0)
-        df = df.set_index('NAME')
+        df = df.set_index('source')
 
         # Create a pick list to pick which friuts they want
-        states_selected = st.multiselect('Select States:', list(df.index),['New Jersey','New York'])
-        states_to_show = df.loc[states_selected]
+        sources_selected = st.multiselect('Select Source:', list(df.index),['Fetch Rewards'])
+        sources_to_show = df.loc[sources_selected]
 
         # Display the table on the page
-        st.dataframe(states_to_show)
+        st.dataframe(sources_to_show)
 
-        st.subheader("Edit-able dataframe")
-        st.experimental_data_editor(states_to_show, num_rows="dynamic")
+        st.subheader("Find the Files You Would Like to Fix")
+        st.experimental_data_editor(sources_to_show, num_rows="dynamic")
     except:
       st.error("The file did not match the expected input")
 
