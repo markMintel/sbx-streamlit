@@ -18,11 +18,11 @@ if sidebar_option == 'Some way to work with files':
         df = df.set_index('source')
 
         # Create a pick list to pick which friuts they want
-        sources_selected = st.multiselect('Select Source:', list(df.index),['Fetch Rewards'])
+        sources_selected = st.multiselect('Select Source:', list(set(df.index)),['Fetch Rewards'])
         sources_to_show = df.loc[sources_selected]
 
         # Display the table on the page
-        st.dataframe(sources_to_show)
+        ## st.dataframe(sources_to_show)
 
         st.subheader("Find the Files You Would Like to Fix")
         st.experimental_data_editor(sources_to_show, num_rows="dynamic")
